@@ -1,0 +1,263 @@
+
+/*
+  styles.css
+  Estilo para a página do personagem - Tema futurista militar
+*/
+
+/* Fonte principal */
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #0a0f1e;
+    color: #e0e6f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  /* Header fixo */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1a2233;
+    border-bottom: 2px solid #ffc400;
+    z-index: 1000;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  header nav ul li a {
+    color: #e0e6f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #ffc400;
+  }
+  
+  /* Espaço geral das seções */
+  section {
+    padding: 0rem 2rem 0rem 2rem; /* compensando o header fixo */
+    max-width: 1500px;
+    margin: auto;
+  }
+  
+  h1, h2 {
+    color: #00b4ff;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+  
+
+/* Estilo para a seção */
+#resumo {
+  padding: 6rem 2rem 0 2rem; /* remove o padding-bottom grande */
+  margin-bottom: 0;            /* garante que não haja margem extra */
+  max-width: 1000px;
+  height: 700px;
+  margin: auto;
+  display: flex;
+  gap: 0rem;
+}
+
+#resumo-text {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem; /* remove o empurrão desnecessário */
+  margin-right: 5rem;
+}
+
+
+#resumo-text .title { 
+  font-size: 3rem;
+}
+
+#resumo-text .subtitle { 
+  font-size: 2rem;
+}
+
+#resumo-text .paragraf { 
+  font-size: 1.2rem;
+}
+
+/* Foto jace */
+
+#foto-jace {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 2) A própria imagem fica em cima */
+#foto-jace img {
+  position: relative;       /* garante que esteja acima do shape */
+  z-index: 2;
+  height: 90%;
+  width: auto;
+}
+
+
+#personagens {
+  padding: 4rem 2rem 0 2rem;  /* 2rem de espaço acima, zero abaixo */
+  max-width: 1500px;
+  margin: auto;
+}
+
+#personagens > h2 {
+  margin-top:    0;    /* remove o gap acima do título */
+  margin-bottom: 1rem; /* controla o espaçamento abaixo dele */
+}
+
+  /* Tabela de personagens */
+
+ table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+}
+  
+  table th, table td {
+    border: 1px solid #2e3b55;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  table th {
+    background-color: #1a2233;
+    color: #ffc400;
+  }
+ 
+  /* Estilo para as linhas da tabela quando o cursor passa por cima */
+  tr:hover {
+  background-color: #2e2e2e; /* Muda a cor de fundo das linhas para um tom mais claro quando o cursor passa por cima */
+  }
+
+
+  /* Imagem dos personagens */
+  .container-img-table {
+    width: 90px; /* Define a largura do container da imagem */
+    height: 90px; /* Define a altura do container da imagem */
+    overflow: hidden; /* Impede que a imagem saia do container */
+    border-radius: 8px; /* Arredonda as bordas do container */
+    border: 2px solid #ffc400; /* Aplica uma borda verde ao redor do container */
+    box-sizing: border-box; /* Inclui as bordas no cálculo do tamanho do container */
+  }
+
+
+    /* Estilo específico para as imagens ampliadas de cada personagem */
+    .img-annelise {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 10% 0%; /* Posiciona a imagem dentro do container, focando no lado esquerdo */
+      transform: scale(1.7); /* Amplia a imagem em 70% */
+    }
+  
+    .img-mori {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 0% 0%; /* A imagem começa do canto superior esquerdo */
+      transform: scale(1.5); /* Amplia a imagem em 50% */
+    }
+  
+    .img-gaori {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 0% 0%; /* A imagem começa do canto superior esquerdo */
+      transform: scale(2); /* Amplia a imagem em 100% */
+    }
+  
+    .img-benimaru {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 100% 0%; /* Foca na parte direita da imagem */
+      transform: scale(2); /* Amplia a imagem em 100% */
+    }
+  
+    .img-yuki {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 0% 0%; /* A imagem começa do canto superior esquerdo */
+      transform: scale(1.8); /* Amplia a imagem em 80% */
+    }
+  
+    .img-stanislav {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 100% 0%; /* Foca na parte direita da imagem */
+      transform: scale(1.9); /* Amplia a imagem em 90% */
+    }
+  
+    .img-schneider {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 30% 0%; /* Foca na parte central da imagem */
+      transform: scale(1.8); /* Amplia a imagem em 80% */
+    }
+  
+    .img-miguel {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Mantém a proporção da imagem */
+      object-position: 0% 0%; /* A imagem começa do canto superior esquerdo */
+      transform: scale(1.4); /* Amplia a imagem em 40% */
+    }
+
+  /* Transforma o nível de confiança em barra de progresso */
+  .confidence-bar {
+  width: 100%;
+  background-color: #0f172a;
+  border: 1px solid #3b82f6;
+  height: 10px;
+  position: relative;
+}
+
+.confidence-bar-fill {
+  height: 100%;
+  background-color: #3b82f6;
+}
+
+.confidence-text {
+  font-size: 12px;
+  text-align: right;
+  margin-top: 2px;
+  color: #8b949e;
+}
+
+
+  .foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid #ffc400;
+  }
+  
+  .quote {
+    cursor: help;
+    color: #00b4ff;
+    border-bottom: 1px dotted #00b4ff;
+  }
+  
+
